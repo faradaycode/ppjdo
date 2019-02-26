@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
+        android:elevation="4dp"
+        app:cardCornerRadius="1dp">
+
+        <RelativeLayout
+            android:id="@+id/relFilterO"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="10dp">
+
+            <Spinner
+                android:id="@+id/tokoFilterO"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <EditText
+                android:id="@+id/tglFilterO"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tokoFilterO"
+                android:ems="10"
+                android:focusable="false"
+                android:hint="Tanggal"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/hargaFilter1O"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tglFilterO"
+                android:ems="5"
+                android:hint="Dari"
+                android:inputType="number"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/txtStripO"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/hargaFilter1O"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:text="Harga" />
+
+            <EditText
+                android:id="@+id/hargaFilter2O"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tglFilterO"
+                android:ems="5"
+                android:hint="Sampai"
+                android:inputType="number"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/judulFilterO"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/hargaFilter1O"
+                android:ems="10"
+                android:hint="Judul Buku / ID AX / ISBN"
+                android:inputType="text"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/btnFilterO"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_below="@+id/judulFilterO"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_toLeftOf="@+id/btnScanO"
+                android:background="@drawable/button_selector"
+                android:text="Submit Filter"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/btnScanO"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/judulFilterO"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/button_selector"
+                android:paddingLeft="22dp"
+                android:paddingRight="22dp"
+                android:text="Scan Barcode"
+                android:textColor="@android:color/white" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <RelativeLayout
+        android:id="@+id/relProgressBarO"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/progressBarO"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/lsStokO"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/card" />
+
+    <TextView
+        android:id="@+id/txtNoDataStokO"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/card"
+        android:gravity="center"
+        android:text="Tidak ada data"
+        android:textSize="24sp"
+        android:visibility="gone" />
+</RelativeLayout>

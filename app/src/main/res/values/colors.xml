@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#c600c6</color>
+    <color name="colorPrimaryDark">#870187</color>
+    <color name="colorAccent">#F803F8</color>
+
+    <!--<color name="colorPrimary">#2D9CDB</color>-->
+    <!--<color name="colorPrimaryDark">#2992CD</color>-->
+    <!--<color name="colorAccent">#212121</color>-->
+
+    <color name="black_overlay">#66000000</color>
+
+    <color name="colorAccentTransparant">#194079ff</color>
+
+    <color name="blackText">#646464</color>
+
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#727272</color>
+
+    <color name="proceed_disable">#DEDEDE</color>
+    <color name="proceed_enable">#72D63A</color>
+    <color name="colorWhite">#FFFFFF</color>
+
+    <color name="twitter">#50d0ff</color>
+
+    <color name="harga">#ff7700</color>
+
+    <color name="order_stok">#ff003b</color>
+
+    <color name="dialog_cancel_bgcolor">#ff7594</color>
+    <color name="dialog_ok_bgcolor">#7ca3ff</color>
+
+
+
+    <color name="magenta">#F803F8</color>
+</resources>

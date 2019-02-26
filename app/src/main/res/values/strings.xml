@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">ppjdo</string>
+
+    <string name="project_name">Magenta System</string>
+
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Username</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign In</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">Username tidak terdaftar</string>
+    <string name="error_invalid_password">Password terlalu pendek</string>
+    <string name="error_incorrect_password">Password yang anda masukan salah</string>
+    <string name="error_field_required">Parameter ini wajib di isi</string>
+    <string name="permission_rationale">Permission untuk mengambil alamat email wajib di berikan</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_checkinout">Cek In / Out</string>
+    <string name="title_cekstok">Cek Stok</string>
+    <string name="title_orderstok">Order Stok</string>
+
+    <string name="location_permission_denied">Permintaan izin lokasi GPS gagal</string>
+    <string name="permission_required_toast">Izin lokasi GPS wajib di terima</string>
+    <string name="permission_rationale_location">Apakaah diperbolehkan penggunaan GPS?</string>
+
+    <string name="form_detail">Silahkan isi form dibawah ini, lalu tekan submit</string>
+
+    <string name="ok">OK</string>
+    <string name="permission_camera_rationale">Access to the camera is needed for detection</string>
+    <string name="no_camera_permission">This application cannot run because it does not have the camera permission.  The application will now exit.</string>
+    <string name="low_storage_error">Face detector dependencies cannot be downloaded due to low device storage</string>
+    <string name="barcode_header">Click &quot;Read Barcode&quot; to read a barcode</string>
+    <string name="read_barcode">Read Barcode</string>
+    <string name="auto_focus">Auto Focus</string>
+    <string name="use_flash">Use Flash</string>
+    <string name="barcode_success">Barcode read successfully</string>
+    <string name="barcode_failure">No barcode captured</string>
+    <string name="barcode_error">"Error reading barcode: %1$s"</string>
+    <string name="title_setting">Daftar Pengaturan</string>
+    <string name="res_img_row_setting">row down fill timer</string>
+
+
+</resources>
