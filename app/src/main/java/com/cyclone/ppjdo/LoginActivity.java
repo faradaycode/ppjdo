@@ -198,7 +198,7 @@ public class LoginActivity extends AppCompatActivity {
                     Config.alert("Tidak ada koneksi, Silahkan cek koneksi internet anda", 3000, main);
                     showProgress(false);
 
-                    //Log.w("error_volley", error.getMessage());
+//                    Log.w("error_volley", error.getMessage());
                     //finish();
                 }
             }) {
