@@ -27,7 +27,10 @@ public class cekInOutEntity extends ArrayAdapter<String> {
     private String[] kordinatLong;
     private Context context;
 
-    public cekInOutEntity(Context context, String[] id, String[] tgl, String[] bln, String[] jam, String[] idtoko, String[] toko, String[] masuk, String[] keluar, String[] kordinatLat, String[] kordinatLong) {
+    public cekInOutEntity(Context context, String[] id, String[] tgl, String[] bln, String[] jam,
+                          String[] idtoko, String[] toko, String[] masuk, String[] keluar,
+                          String[] kordinatLat, String[] kordinatLong) {
+
         super(context, R.layout.baris_cekinout, id);
         this.context = context;
         this.id = id;

@@ -63,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
 
     Spinner bulan, tahun, toko;
     ListView ls;
+    TextView txnama;
 
     LayoutInflater layoutInflater;
     BottomNavigationView navigation;
@@ -139,6 +140,7 @@ public class MainActivity extends AppCompatActivity {
         bulan = (Spinner) findViewById(R.id.bulanFilter);
         tahun = (Spinner) findViewById(R.id.tahunFilter);
         ls = (ListView) findViewById(R.id.ls);
+        txnama = (TextView) findViewById(R.id.txNamanya);
 
         //start
         sesi_user();
@@ -157,7 +159,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void cekinout() {
+
         ls = (ListView) findViewById(R.id.ls);
+        String fullnamae = CapitaliseEachWord(detail_user.getString("nama", "User").toLowerCase()).toString();
+        String namae = firstname(fullnamae);
+
+        txnama.setText("Hai " + namae + ", Selamat Bekerja");
 
         String[] bulanList = {"-- Filter Bulan --", "Januari", "Februari", "Maret", "April", "Mei", "Juni", "July", "Agustus", "September", "Oktober", "November", "Desember"};
         String[] tahunList = {"-- Filter Tahun --", "2017", "2018", "2019", "2020"};
@@ -264,7 +271,11 @@ public class MainActivity extends AppCompatActivity {
                                 findViewById(R.id.txtNoData).setVisibility(View.GONE);
                                 JSONArray list = json.getJSONArray("list");
 
-                                String[] id = new String[totalRec], tgl = new String[totalRec], bln = new String[totalRec], jam = new String[totalRec], idtoko = new String[totalRec], toko = new String[totalRec], masuk = new String[totalRec], keluar = new String[totalRec], kordinatLong = new String[totalRec], kordinatLat = new String[totalRec];
+                                String[] id = new String[totalRec], tgl = new String[totalRec],
+                                        bln = new String[totalRec], jam = new String[totalRec],
+                                        idtoko = new String[totalRec], toko = new String[totalRec],
+                                        masuk = new String[totalRec], keluar = new String[totalRec],
+                                        kordinatLong = new String[totalRec], kordinatLat = new String[totalRec];
 
                                 for (Integer il = 0; il < list.length(); il++) {
                                     JSONObject rec = list.getJSONObject(il);
@@ -281,7 +292,9 @@ public class MainActivity extends AppCompatActivity {
                                     kordinatLong[il] = rec.getString("long");
                                 }
 
-                                cekInOutEntity customList = new cekInOutEntity(getApplicationContext(), id, tgl, bln, jam, idtoko, toko, masuk, keluar, kordinatLat, kordinatLong);
+                                cekInOutEntity customList = new cekInOutEntity(getApplicationContext(),
+                                        id, tgl, bln, jam, idtoko, toko, masuk, keluar, kordinatLat,
+                                        kordinatLong);
 
                                 ls.setAdapter(customList);
                                 ls.setVisibility(View.VISIBLE);
@@ -770,7 +783,7 @@ public class MainActivity extends AppCompatActivity {
 
                         findViewById(R.id.relProgressBarO).setVisibility(View.GONE);
 
-                        //Log.w("loggeee", respon);
+                        Log.wtf("loggeee", respon);
 
                         try {
                             JSONObject json = new JSONObject(respon);
@@ -780,8 +793,24 @@ public class MainActivity extends AppCompatActivity {
                                 findViewById(R.id.txtNoDataStokO).setVisibility(View.GONE);
                                 JSONArray list = json.getJSONArray("list");
 
-                                String[] idax = new String[totalRec], rating = new String[totalRec], departemen = new String[totalRec], judul = new String[totalRec], harga = new String[totalRec], orderstok = new String[totalRec], stokaktual = new String[totalRec], ito = new String[totalRec], stokgudang = new String[totalRec], stokrekomendasi = new String[totalRec], idtoko = new String[totalRec], iddep = new String[totalRec];
-                                String[] isbn = new String[totalRec], gudangJkt = new String[totalRec], gudangBdg = new String[totalRec], gudangSby = new String[totalRec], gudangJog = new String[totalRec];
+                                String[] idax = new String[totalRec],
+                                        rating = new String[totalRec],
+                                        departemen = new String[totalRec],
+                                        judul = new String[totalRec],
+                                        harga = new String[totalRec],
+                                        orderstok = new String[totalRec],
+                                        stokaktual = new String[totalRec],
+                                        ito = new String[totalRec],
+                                        stokgudang = new String[totalRec],
+                                        stokFisik = new String[totalRec],
+                                        stokrekomendasi = new String[totalRec],
+                                        idtoko = new String[totalRec],
+                                        iddep = new String[totalRec];
+                                String[] isbn = new String[totalRec],
+                                        gudangJkt = new String[totalRec],
+                                        gudangBdg = new String[totalRec],
+                                        gudangSby = new String[totalRec],
+                                        gudangJog = new String[totalRec];
 
                                 for (Integer il = 0; il < list.length(); il++) {
                                     JSONObject rec = list.getJSONObject(il);
@@ -797,6 +826,7 @@ public class MainActivity extends AppCompatActivity {
                                     stokaktual[il] = rec.getString("stok_aktual");
                                     ito[il] = rec.getString("ito");
                                     stokgudang[il] = rec.getString("stok_gudang");
+                                    stokFisik[il] = rec.getString("stok_fisik");
                                     stokrekomendasi[il] = rec.getString("stok_rekomendasi");
                                     isbn[il] = rec.getString("isbn");
                                     gudangJkt[il] = rec.getString("gudang_jkt");
@@ -805,7 +835,7 @@ public class MainActivity extends AppCompatActivity {
                                     gudangJog[il] = rec.getString("gudang_jog");
                                 }
 
-                                orderStokEntity customList = new orderStokEntity(getApplicationContext(), idax, rating, departemen, judul, harga, orderstok, stokaktual, ito, stokgudang, stokrekomendasi, idtoko, iddep, isbn, gudangJkt, gudangBdg, gudangSby, gudangJog);
+                                orderStokEntity customList = new orderStokEntity(getApplicationContext(), idax, rating, departemen, judul, harga, orderstok, stokaktual, ito, stokgudang, stokFisik, stokrekomendasi, idtoko, iddep, isbn, gudangJkt, gudangBdg, gudangSby, gudangJog);
 
                                 ls.setAdapter(customList);
                                 ls.setVisibility(View.VISIBLE);
@@ -1073,5 +1103,23 @@ public class MainActivity extends AppCompatActivity {
         if (navigation.getSelectedItemId() == R.id.navigation_home) {
             showDataCekinout();
         }
+    }
+
+    //ferdi code
+    StringBuilder CapitaliseEachWord(String words) {
+        String[] strArray = words.split(" ");
+        StringBuilder builder = new StringBuilder();
+        for (String s : strArray) {
+            String cap = s.substring(0, 1).toUpperCase() + s.substring(1);
+            builder.append(cap + " ");
+        }
+        return builder;
+    }
+
+    String firstname(String word) {
+
+        String[] splited = word.split("\\s+");
+
+        return splited[0];
     }
 }

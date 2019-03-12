@@ -11,7 +11,7 @@ import android.widget.TextView;
  */
 
 public class Config {
-    public static String urlHandler = "http://data.magentamedia.co.id/";
+    public static String urlHandler = "https://data.magentamedia.co.id/";
     public static String keyDb = "NAHSAKEYDBMAMAMAO";
     public static Snackbar snackbar;
 
