@@ -1,218 +1,229 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:padding="2dp">
+    android:padding="2dp"
+    app:cardBackgroundColor="#fff"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="5dp">
 
     <RelativeLayout
-        android:id="@+id/relGudang1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/relStokElse"
-        android:background="@color/dialog_cancel_bgcolor">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/relGudang1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/relStokElse"
+            android:background="@color/dialog_cancel_bgcolor">
+
+            <TextView
+                android:id="@+id/txtStokGudangJkt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="2dp"
+                android:text="Gudang Jakarta : 30"
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtStokGudangBdg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="2dp"
+                android:text="Gudang Bandung : 40"
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relGudang2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relGudang1"
+            android:background="@color/harga">
+
+            <TextView
+                android:id="@+id/txtStokGudangSby"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="2dp"
+                android:text="Gudang Surabaya : 10"
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtStokGudangJog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="2dp"
+                android:text="Gudang Jogja : 20"
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
 
         <TextView
-            android:id="@+id/txtStokGudangJkt"
+            android:id="@+id/txtIto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/txtDepartemen"
+            android:layout_below="@+id/txtDepartemen"
             android:layout_marginBottom="2dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="2dp"
-            android:layout_marginTop="2dp"
-            android:text="Gudang Jakarta : 30"
-            android:textColor="@android:color/white"
-            android:textSize="15sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/txtStokGudangBdg"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_marginBottom="2dp"
-            android:layout_marginLeft="2dp"
             android:layout_marginRight="20dp"
             android:layout_marginTop="2dp"
-            android:text="Gudang Bandung : 40"
-            android:textColor="@android:color/white"
-            android:textSize="15sp"
-            android:textStyle="bold" />
-    </RelativeLayout>
+            android:text="ITO : 40"
+            android:textColor="@color/black_overlay" />
 
-    <RelativeLayout
-        android:id="@+id/relGudang2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/relGudang1"
-        android:background="@color/harga">
+        <RelativeLayout
+            android:id="@+id/relStokElse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtIto"
+            android:background="@color/proceed_enable">
+
+            <TextView
+                android:id="@+id/txtStokAktual"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="2dp"
+                android:text="Sisa Stok : 50"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtStokGudang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="2dp"
+                android:text="Stok Gudang : 100"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
 
         <TextView
-            android:id="@+id/txtStokGudangSby"
-            android:layout_width="wrap_content"
+            android:id="@+id/txtJudul"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/txtIsbn"
+            android:layout_below="@+id/txtIsbn"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="2dp"
+            android:text="TextView"
+            android:textColor="@color/blackText"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtIsbn"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="2dp"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="5dp"
             android:layout_marginRight="2dp"
-            android:layout_marginTop="2dp"
-            android:text="Gudang Surabaya : 10"
-            android:textColor="@android:color/white"
-            android:textSize="15sp"
+            android:layout_toRightOf="@+id/txtidax"
+            android:text="324345124123123"
+            android:textColor="@color/dialog_ok_bgcolor"
+            android:textSize="16sp"
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/txtStokGudangJog"
+            android:id="@+id/txtDepartemen"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/txtHarga"
+            android:layout_below="@+id/txtHarga"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="2dp"
+            android:text="Nama Departemen"
+            android:textColor="@color/black_overlay" />
+
+        <TextView
+            android:id="@+id/txtRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/txtHarga"
             android:layout_alignParentRight="true"
             android:layout_marginBottom="2dp"
-            android:layout_marginLeft="2dp"
             android:layout_marginRight="20dp"
             android:layout_marginTop="2dp"
-            android:text="Gudang Jogja : 20"
-            android:textColor="@android:color/white"
-            android:textSize="15sp"
-            android:textStyle="bold" />
-    </RelativeLayout>
-
-    <TextView
-        android:id="@+id/txtIto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/txtDepartemen"
-        android:layout_below="@+id/txtDepartemen"
-        android:layout_marginBottom="2dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="2dp"
-        android:text="ITO : 40"
-        android:textColor="@color/black_overlay" />
-
-    <RelativeLayout
-        android:id="@+id/relStokElse"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/txtIto"
-        android:background="@color/proceed_enable">
+            android:text="Rating : 5"
+            android:textColor="@color/black_overlay" />
 
         <TextView
-            android:id="@+id/txtStokAktual"
+            android:id="@+id/txtidax"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/textView12"
             android:layout_marginBottom="2dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="2dp"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="2dp"
-            android:text="Sisa Stok : 50"
+            android:background="@color/colorAccent"
+            android:padding="10dp"
+            android:text="AX-1"
             android:textColor="@android:color/white"
             android:textSize="18sp"
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/txtStokGudang"
-            android:layout_width="wrap_content"
+            android:id="@+id/txtHarga"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
+            android:layout_alignLeft="@+id/txtJudul"
+            android:layout_below="@+id/txtJudul"
             android:layout_marginBottom="2dp"
-            android:layout_marginLeft="2dp"
-            android:layout_marginRight="20dp"
             android:layout_marginTop="2dp"
-            android:text="Stok Gudang : 100"
-            android:textColor="@android:color/white"
-            android:textSize="18sp"
+            android:text="Rp. 100.000"
+            android:textColor="@color/harga"
             android:textStyle="bold" />
 
+        <TextView
+            android:id="@+id/txtStok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/txtIto"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="2dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="2dp"
+            android:text="Stok : 50"
+            android:textColor="@color/proceed_enable"
+            android:textSize="18sp"
+            android:textStyle="bold" />
     </RelativeLayout>
 
-    <TextView
-        android:id="@+id/txtJudul"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/txtIsbn"
-        android:layout_below="@+id/txtIsbn"
-        android:layout_marginBottom="2dp"
-        android:layout_marginTop="2dp"
-        android:text="TextView"
-        android:textColor="@color/blackText"
-        android:textSize="16sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/txtIsbn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="2dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="2dp"
-        android:layout_toRightOf="@+id/txtidax"
-        android:text="324345124123123"
-        android:textColor="@color/dialog_ok_bgcolor"
-        android:textSize="16sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/txtDepartemen"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/txtHarga"
-        android:layout_below="@+id/txtHarga"
-        android:layout_marginBottom="2dp"
-        android:layout_marginTop="2dp"
-        android:text="Nama Departemen"
-        android:textColor="@color/black_overlay" />
-
-    <TextView
-        android:id="@+id/txtRating"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/txtHarga"
-        android:layout_alignParentRight="true"
-        android:layout_marginBottom="2dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="2dp"
-        android:text="Rating : 5"
-        android:textColor="@color/black_overlay" />
-
-    <TextView
-        android:id="@+id/txtidax"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView12"
-        android:layout_marginBottom="2dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="2dp"
-        android:background="@color/colorAccent"
-        android:padding="10dp"
-        android:text="AX-1"
-        android:textColor="@android:color/white"
-        android:textSize="18sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/txtHarga"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/txtJudul"
-        android:layout_below="@+id/txtJudul"
-        android:layout_marginBottom="2dp"
-        android:layout_marginTop="2dp"
-        android:text="Rp. 100.000"
-        android:textColor="@color/harga"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/txtStok"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/txtIto"
-        android:layout_alignParentRight="true"
-        android:layout_marginBottom="2dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="2dp"
-        android:text="Stok : 50"
-        android:textColor="@color/proceed_enable"
-        android:textSize="18sp"
-        android:textStyle="bold" />
-
-</RelativeLayout>
+</android.support.v7.widget.CardView>
