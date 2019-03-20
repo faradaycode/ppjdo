@@ -74,8 +74,8 @@
                     android:gravity="center"
                     android:hint="@string/prompt_email"
                     android:inputType="number"
+                    android:imeOptions="actionNext"
                     android:maxLines="1"
-                    android:singleLine="true"
                     android:textAlignment="center" />
 
             </android.support.design.widget.TextInputLayout>
@@ -97,7 +97,6 @@
                     android:imeOptions="actionUnspecified"
                     android:inputType="textPassword"
                     android:maxLines="1"
-                    android:singleLine="true"
                     android:textAlignment="center" />
 
             </android.support.design.widget.TextInputLayout>
@@ -116,5 +115,7 @@
                 android:textStyle="bold" />
 
         </LinearLayout>
+
     </ScrollView>
+
 </RelativeLayout>
