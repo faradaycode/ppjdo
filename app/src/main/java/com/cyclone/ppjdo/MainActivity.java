@@ -2,8 +2,6 @@ package com.cyclone.ppjdo;
 
 import android.app.DatePickerDialog;
 import android.app.Dialog;
-import android.app.Fragment;
-import android.app.FragmentTransaction;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -149,13 +147,16 @@ public class MainActivity extends AppCompatActivity {
 
     //ferdi's code
     private void sesi_user() {
-        String jabatan = detail_user.getString("jabatan", null);
+//        String jabatan = detail_user.getString("jabatan", null);
 
         //check jabatan, if not same with static value inside config, hide the some bottom nav item
-        if (!Config.marketings.equals(jabatan)) {
-            navigation.getMenu().removeItem(R.id.navigation_cekstok);
-            navigation.getMenu().removeItem(R.id.navigation_orderstok);
-        }
+//        if (!Config.marketings.equals(jabatan)) {
+//            navigation.getMenu().removeItem(R.id.navigation_cekstok);
+//            navigation.getMenu().removeItem(R.id.navigation_orderstok);
+//        }
+
+        navigation.getMenu().removeItem(R.id.navigation_cekstok);
+        navigation.getMenu().removeItem(R.id.navigation_orderstok);
     }
 
     private void cekinout() {
@@ -413,7 +414,7 @@ public class MainActivity extends AppCompatActivity {
                             toko.setAdapter(adapterToko);
 
                         } catch (Exception e) {
-                            Log.w("error_volley_json", e.getMessage());
+//                            Log.w("error_volley_json", e.getMessage());
 
                             Config.alert("Data toko tidak tersedia", 1000, MainActivity.main);
                         }
@@ -659,7 +660,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(String respon) {
 
-                        //Log.w("logeee", respon);
+                        Log.w("orderstock", respon);
 
                         findViewById(R.id.relProgressBarO).setVisibility(View.GONE);
 
@@ -692,7 +693,7 @@ public class MainActivity extends AppCompatActivity {
 
 
                         } catch (Exception e) {
-                            Log.w("error_volley_json", e.getMessage());
+//                            Log.w("error_volley_json", e.getMessage());
 
                             Config.alert("Data toko tidak tersedia", 1000, MainActivity.main);
                         }
